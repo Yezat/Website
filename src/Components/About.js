@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Fade from "react-reveal";
 
 class About extends Component {
   render() {
@@ -14,11 +13,9 @@ class About extends Component {
     const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
 
     return (
       <section id="about">
-        <Fade duration={1000}>
           <div className="row">
             <div className="three columns">
               <img
@@ -48,17 +45,9 @@ class About extends Component {
                     <span>{email}</span>
                   </p>
                 </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resumeDownload} className="button">
-                      <i className="fa fa-download"></i>Download Resume
-                    </a>
-                  </p>
-                </div>
               </div>
             </div>
           </div>
-        </Fade>
       </section>
     );
   }

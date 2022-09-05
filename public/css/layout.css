@@ -22,7 +22,12 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body {    
+   background-image: url("../images/background.jpg");
+   background-attachment: scroll;
+   background-repeat: no-repeat;
+   background-size: contain;
+ }
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -36,7 +41,28 @@ header {
    
    text-align: center;
    overflow: hidden;
+
 }
+
+/* social links */
+header .social-links {
+   margin: 18px 0 30px 0;
+   padding: 0;
+   font-size: 30px;
+}
+header .social-links li {
+    display: inline-block; 
+    margin: 0;
+    padding: 0;
+    margin-left: 42px;
+      color: #F06000;
+}
+
+header .social-links li:first-child { margin-left: 0; }
+
+header .social-links li a { color: white; }
+header .social-links li a:hover,a:focus { color: #313131;}
+
 
 /* vertically center banner section */
 header:before {
@@ -62,7 +88,7 @@ header .banner-text h1 {
    margin: 0 auto 18px auto;
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 18px/1.9em 'librebaskerville-bold', sans-serif;
    color: #ddd;
    margin: 0 auto;
    width: 70%;
@@ -164,7 +190,7 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: #fe6928;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -174,7 +200,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: #838C95; }
 
 
 /* ------------------------------------------------------------------ */
@@ -412,7 +438,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
+   /* background: #ebeeee; */
    padding-top: 90px;
    padding-bottom: 60px;
 }
@@ -976,6 +1002,7 @@ footer .social-links li {
 }
 
 footer .social-links li:first-child { margin-left: 0; }
+
 
 /* Go To Top Button */
 #go-top {

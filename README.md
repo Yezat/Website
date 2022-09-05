@@ -1,4 +1,5 @@
-# React Nice Resume :page_with_curl:
+# Website built in react
+
 
 ### [LIVE DEMO](https://nordicgiant2.github.io/react-nice-resume-page/index.html)
 
