@@ -488,7 +488,7 @@ ul#nav li.current a { color: #838C95; }
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 
-   background: url(../images/overlay-bg.png) repeat;
+  /* background removed to reduce assets; gradient applied below */
    z-index: 1;
 }
 .portfolio-item .item-wrap .link-icon {
