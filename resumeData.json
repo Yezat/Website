@@ -78,20 +78,20 @@
     "portfolio":{
       "projects": [
 		{
-            "title":"A High Dimensional Model for Adversarial Training",
-            "category":"Poster @ AISTATS 2025",
+            "title":"A High Dimensional Model for Adversarial Training - Poster @ AISTATS 2025",
+            "category":"Poster",
             "image":"03.png",
             "url":"https://github.com/Yezat/AISTATS-Poster/blob/main/A%20High%20Dimensional%20Statistical%20Model%20for%20Adversarial%20Training.pdf"			
 		},
         {
-            "title":"Exploring delayed Generalisation - Grokking",
-            "category":"Reproducing analytical solutions of one-layer neural networks to modular addition.",
+            "title":"Exploring delayed Generalisation - Grokking. Reproducing analytical solutions of one-layer neural networks to modular addition.",
+            "category":"Blogpost",
             "image":"snip.png",
             "url":"https://huggingface.co/spaces/Yezat/grokking"
         },
         {
-          "title":"Adversarial Setting",
-          "category":"A High Dimensional Model for Adversarial Training: Geometry and Trade-Offs",
+          "title":"A High Dimensional Model for Adversarial Training: Geometry and Trade-Offs",
+          "category":"Paper",
           "image":"02.png",
           "url":"https://arxiv.org/abs/2402.05674"
         }
