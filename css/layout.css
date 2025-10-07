@@ -26,7 +26,8 @@ body {
    background-image: url("../images/background.jpg");
    background-attachment: scroll;
    background-repeat: no-repeat;
-   background-size: contain;
+   background-size: cover;
+   background-position: center center;
  }
 
 /* ------------------------------------------------------------------ */
@@ -438,17 +439,17 @@ ul#nav li.current a { color: #838C95; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   /* background: #ebeeee; */
+   background: #000524;
    padding-top: 90px;
    padding-bottom: 60px;
 }
 #portfolio h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 1px;
+   text-transform: none;
+   letter-spacing: .5px;
    text-align: center;
    margin-bottom: 48px;
-   color: #95A3A3;
+   color: #EBEEEE;
 }
 
 /* Portfolio Content */
@@ -525,6 +526,97 @@ ul#nav li.current a { color: #838C95; }
    color: #c6c7c7;
    margin-bottom: 0;
 }
+
+/* Enhanced layout and visuals */
+#portfolio-wrapper {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 24px;
+   align-items: stretch;
+   justify-content: start;
+   align-content: start;
+   grid-auto-flow: row dense;
+}
+/* Kill clearfix pseudo-elements that create an empty first slot */
+#portfolio-wrapper:before,
+#portfolio-wrapper:after {
+   content: none !important;
+   display: none !important;
+}
+/* Neutralize legacy float grid inside portfolio to prevent odd wrapping */
+#portfolio-wrapper .columns,
+#portfolio-wrapper .column {
+   float: none;
+   width: auto;
+   padding: 0;
+   margin: 0;
+   display: contents;
+}
+/* Prevent legacy row-clearing utilities from creating empty leading gaps */
+#portfolio-wrapper .first,
+#portfolio-wrapper .s-first { clear: none !important; }
+.portfolio-item {
+   margin: 0 !important; /* grid provides spacing */
+}
+.portfolio-item .item-wrap {
+   border-radius: 12px;
+   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+   transform: translateZ(0);
+   position: relative;
+}
+.portfolio-item .item-wrap a {
+   outline: none;
+}
+.portfolio-item .item-wrap img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+/* Maintain a pleasant aspect ratio for tiles */
+.portfolio-item .item-wrap {
+   aspect-ratio: 16 / 10;
+}
+
+/* Hover/focus effects */
+.portfolio-item:hover .item-wrap,
+.portfolio-item .item-wrap:focus-within {
+   transform: translateY(-2px);
+   box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+.portfolio-item .item-wrap a:focus {
+   outline: 2px solid #0762f9;
+   outline-offset: 2px;
+}
+.portfolio-item .item-wrap a:focus .overlay,
+.portfolio-item .item-wrap a:focus .link-icon {
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+/* Persistent caption overlay for visibility */
+.portfolio-item .item-wrap .overlay {
+   opacity: 1;
+   background: linear-gradient( to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0) 65% );
+}
+.portfolio-item .portfolio-item-meta {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding: 10px 14px;
+}
+.portfolio-item .portfolio-item-meta h5 { color: #fff; }
+.portfolio-item .portfolio-item-meta p { color: #e0e0e0; }
+
+/* Improve footer readability and visibility */
+footer {
+   background: #000524;
+   color: #EBEEEE;
+}
+footer a, footer a:visited { color: #cfd8ff; }
+footer a:hover, footer a:focus { color: #fff; }
+footer .social-links li { color: #F06000; }
 
 /* on hover */
 .portfolio-item:hover .overlay {

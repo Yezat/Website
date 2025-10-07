@@ -254,8 +254,9 @@
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
-   #portfolio-wrapper .columns { margin-bottom: 40px; }
-   .popup-modal {	max-width: 85%; }
+  #portfolio-wrapper { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  #portfolio-wrapper .columns { margin-bottom: 0; }
+  .popup-modal {	max-width: 85%; }
 
 
    /* Testimonials Section
@@ -369,6 +370,9 @@
    /* social links */
    footer .social-links { font-size: 20px; }
    footer .social-links li { margin-left: 14px; }   
+
+ /* Portfolio Section */
+  #portfolio-wrapper { grid-template-columns: repeat(auto-fit, minmax(85%, 1fr)); gap: 16px; }
 
 }
 

@@ -775,13 +775,22 @@ properly.
     (http://nicolasgallagher.com/micro-clearfix-hack/
 --------------------------------------------------------------------- */
 
-.cf:before,
+/* .cf:before, */
 .cf:after {
     content: " ";
     display: table;
 }
 .cf:after {
     clear: both;
+}
+
+/* Avoid clearfix from creating pseudo elements within portfolio wrapper */
+#portfolio-wrapper.cf:before,
+#portfolio-wrapper.cf:after,
+#portfolio-wrapper .cf:before,
+#portfolio-wrapper .cf:after {
+    content: none !important;
+    display: none !important;
 }
 
 /*  2. Misc -------------------------------------------------------- */
